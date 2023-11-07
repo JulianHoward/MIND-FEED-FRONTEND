@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Feed - Mapa</title>
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../css/mapa.css" />
+    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png">
+    <script src="../js/city.js"></script>
+  </head>
+  <body>
+
+    <script>
+      function setupMenu() {
+        const openMenu = document.getElementById('openMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        const navLinks = document.querySelector('.desplegar');
+    
+        openMenu.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
+            openMenu.style.display = 'none';
+            closeMenu.style.display = 'block';
+        });
+    
+        closeMenu.addEventListener('click', function () {
+            navLinks.classList.remove('show');
+            openMenu.style.display = 'block';
+            closeMenu.style.display = 'none';
+        });
+      }
+    
+      document.addEventListener('DOMContentLoaded', setupMenu);
+    </script>
+    <div class="mobile-menu">
+      <div class="menu-icon">
+        <div class="menu-desplegar-icon">
+          <img src="../img/mobile/iconos_cel-02.png" alt="" id="openMenu"/>
+          <img src="../img/mobile/iconos_cel-03.png" alt="" id="closeMenu">
+        </div>
+        <div class="img-logo-mobile">
+          <img
+            src="../img/mobile/iconos_cel-06.png"
+            alt=""
+            class="logo-mobile"
+          />
+        </div>
+        <div class="login-button-mobile"><button>Log in</button></div>
+      </div>
+      <div class="desplegar">
+        <ul id="menu-list">
+          <li><a href="index.html">Inicio</a></li>
+          <div class="line-link"></div>
+          <li><a href="login.html">Log in</a></li>
+          <div class="line-link"></div>
+          <li><a href="signup.html">Sign up</a></li>
+          <div class="line-link"></div>
+          <li><a href="mapa.html">Mapa</a></li>
+          <div class="line-link"></div>
+          <li>
+            <a href="instituciones.html">Instituciones educativas y contacto</a>
+          </li>
+          <div class="line-link"></div>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="header-bar-container">
+      <div class="image-container">
+        <img
+          src="../img/logo_mindfeed-01.png"
+          alt="Logo MindFeed"
+          class="image-logo"
+        />
+      </div>
+      <div class="buttons-pages-container">
+        <ul class="list-buttons-pages">
+          <li class="list-item" id="inicio">
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="list-item" id="login">
+            <a href="login.html">Log in</a>
+          </li>
+          <li class="list-item" id="signup">
+            <a href="signup.html">Sign up</a>
+          </li>
+          <li class="list-item" id="mapa">
+            <a href="mapa.html">Mapa</a>
+          </li>
+          <li class="list-item" id="instituciones">
+            <a href="instituciones.html">Instituciones educativas y contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="img-text-container">
+      <div class="img-map-container">
+        <img src="../img/mind feed_imágenes-05.png" alt="Map Icon" />
+      </div>
+      <div class="text-map-container">
+        Ofrecemos la capacidad de filtrar cursos según tus preferencias,
+        incluyendo país, ciudad, nivel educativo y precio. Esto significa que
+        puedes encontrar cursos que se adapten perfectamente a tus necesidades y
+        circunstancias.
+      </div>
+    </div>
+
+    <div class="filter-map-container">
+      <div class="title-map-filter">
+        <h1>MAPA</h1>
+      </div>
+      <div class="input-filter-map">
+        <div class="pais-text">Pais:</div>
+        <div class="input-country">
+            <form action="#" method="get" class="form-flex">
+              <input type="text" name="q" id="countryInput" placeholder="Ingresa el país">
+                <button type="submit" class="button-filter-map" onclick="getCities(event)">
+                  <img src="../img/search-solid.svg" alt="Search Icon" />
+              </button>
+              
+            </div>
+            </form>
+        </div>
+      </div>
+
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+
+    <div class="filter-country-container">
+        <div class="icon-button-filter">
+            <div class="img-filter-container">
+                <img src="../img/mobile/iconos_cel-02.png" alt="Menu Icon">
+            </div>
+            
+            <div>Filtros</div>
+        </div>
+    </div>
+
+    <div id="resultados" class="resultados"></div>
+
+<script src="../js/loadMap.js"></script>
+<script>
+  const currentPage = "mapa";
+
+  document.querySelectorAll(".list-item").forEach((item) => {
+    item.classList.remove("current");
+  });
+
+  document.getElementById(currentPage).classList.add("current");
+</script>
+  </body>
+</html>

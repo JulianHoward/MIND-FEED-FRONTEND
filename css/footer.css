@@ -1,0 +1,101 @@
+@font-face{
+    font-family: "Helvetica";
+    src: url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Helvetica Bold";
+    src: url('../fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
+footer{
+    background-color: #33548B;
+}
+
+.title-container-footer{
+    text-align: center;
+}
+
+.title-container-footer h3{
+    font-family: "Helvetica Bold";
+    font-size: 15px;
+    color: #FFFFFF;
+    padding-top: 1%;
+    margin-bottom: 1%;
+}
+
+.dots-mobile-contacts{
+    width: 70%;
+    border-bottom: 3px dotted #B1C6D4;
+    margin-left: 15%;
+}
+
+.social-networks-list-container{
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.social-networks-list{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.social-networks-list li{
+    list-style: none;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.social-networks-list a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Helvetica";
+    font-size: 12px;
+}
+
+
+@media(min-width: 992px){
+    footer{
+        background-color: #33548B;
+    }
+    
+    .title-container-footer{
+        text-align: center;
+    }
+    
+    .title-container-footer h3{
+        font-family: "Helvetica Bold";
+        font-size: 25px;
+        color: #FFFFFF;
+        padding-top: 1%;
+        margin-bottom: 1%;
+    }
+    
+    .dots-mobile-contacts{
+        width: 80%;
+        border-bottom: 3px dotted #B1C6D4;
+        margin-left: 10%;
+    }
+    
+    .social-networks-list-container{
+        text-align: center;
+        padding-bottom: 1%;
+    }
+    
+    .social-networks-list{
+        margin-bottom: 0;
+    }
+    
+    .social-networks-list li{
+        list-style: none;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+    
+    .social-networks-list a{
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: "Helvetica";
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Feed - Sign up</title>
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png">
+  </head>
+  <body>
+
+    <div class="mobile-menu">
+      <div>
+        <div class="menu-icon">
+          <div class="menu-desplegar-icon">
+            
+          </div>
+          <div class="img-logo-mobile">
+            <img
+              src="../img/mobile/iconos_cel-06.png"
+              alt=""
+              class="logo-mobile"
+            />
+          </div>
+          <div class="login-button-mobile">
+            <button id="login-other-color">Log in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rest-mobile-container">
+      <div class="img-background-mobile">
+        <img src="../img/mobile/iconos_cel-18.png" alt="">
+      </div>
+    </div>
+
+    <div class="form-above-mobile">
+      <div class="img-above">
+        <img src="../img/mobile/iconos_cel-19.png" alt="">
+      </div>
+      <div class="dots-form-mobile">
+        <img src="../img/mobile/iconos_cel-08.png" alt="">
+      </div>
+      <div class="title-mobile-container">
+        <h1> CREA TU CUENTA </h1>
+      </div>
+      <div class="labels-forms-mobile">
+        <form action="POST">
+          <div class="mitad-mitad-mobile">
+            <div class="izquierda-mobile">
+              <label for="nombres">Nombres:</label>
+              <label for="apellidos">Apellidos:</label>
+              <label for="fechaNacimiento">Fecha de nacimiento:</label>
+              <label for="pais">País:</label>
+              <label for="ciudad">Ciudad:</label>
+              <label for="carnet">N° Carnet:</label>
+              <label for="contraseña">Contraseña:</label>
+              <label for="correo">E-mail:</label>
+              <label for="username">Username:</label>
+            </div>
+            <div class="derecha-mobile">
+              <input type="text" name="nombres" id="nombres" />
+              <input type="text" name="apellidos" id="apellidos" />
+              <input type="date" name="fechaNacimiento" id="fechaNacimiento"/>
+              <input type="text" name="pais" id="pais" />
+              <input type="text" name="ciudad" id="ciudad" />
+              <input type="number" name="carnet" id="carnet" />
+              <input type="password" name="contraseña" id="contraseña" />
+              <input type="email" name="correo" id="correo" />
+              <input type="text" name="username" id="username" />
+            </div>
+          </div>
+          
+          <div class="display-flex-container-mobile">
+            <div class="file-container-mobile">
+              <label for="perfil" class="file-icon-mobile">Subir foto:</label>
+              <img src="../img/Botones_imagenes-13.png" alt="Icono de imagen" class="file-image-mobile" id="imagenSubir"/>
+              <input type="file" name="perfil" id="perfil" class="file-input-mobile"/>
+              <script>
+                document.getElementById('imagenSubir').addEventListener('click', function() {
+                    document.getElementById('perfil').click();
+                });
+            </script>
+            </div>
+            <div class="line-separator-mobile"></div>
+            <div class="create-account-container-mobile">
+              <button type="button">Crear cuenta</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="header-bar-container">
+      <div class="image-container">
+        <img
+          src="../img/logo_mindfeed-01.png"
+          alt="Logo MindFeed"
+          class="image-logo"
+        />
+      </div>
+      <div class="buttons-pages-container">
+        <ul class="list-buttons-pages">
+          <li class="list-item" id="inicio">
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="list-item" id="login">
+            <a href="login.html">Log in</a>
+          </li>
+          <li class="list-item" id="signup">
+            <a href="signup.html">Sign up</a>
+          </li>
+          <li class="list-item" id="mapa">
+            <a href="mapa.html">Mapa</a>
+          </li>
+          <li class="list-item" id="instituciones">
+            <a href="instituciones.html">Instituciones educativas y contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="signup-container-general">
+      <div class="signup-image-container-left">
+        <img src="../img/Botones_imagenes-10.png" alt="Sign up Image" />
+      </div>
+      <div class="empty-container-right">
+        <div class="float-container-form">
+          <div class="image-logo-container-form">
+            <img
+              src="../img/Botones_imagenes-15.png"
+              alt="Logo Mind Feed Image"
+            />
+          </div>
+          <div class="separator-dots-form"></div>
+          <div class="form-labels-inputs-container">
+            <div class="title-form">
+              <h1>CREA TU CUENTA</h1>
+            </div>
+            <div class="labels-forms">
+              <form action="POST">
+                <div class="mitad-mitad">
+                  <div class="izquierda">
+                    <label for="nombres">Nombres:</label>
+                    <label for="apellidos">Apellidos:</label>
+                    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                    <label for="pais">País:</label>
+                    <label for="ciudad">Ciudad:</label>
+                    <label for="carnet">N° Carnet:</label>
+                    <label for="contraseña">Contraseña:</label>
+                    <label for="correo">E-mail:</label>
+                    <label for="username">Username:</label>
+                  </div>
+                  <div class="derecha">
+                    <input type="text" name="nombres" id="nombres" />
+                    <input type="text" name="apellidos" id="apellidos" />
+                    <input type="date" name="fechaNacimiento" id="fechaNacimiento"/>
+                    <input type="text" name="pais" id="pais" />
+                    <input type="text" name="ciudad" id="ciudad" />
+                    <input type="number" name="carnet" id="carnet" />
+                    <input type="password" name="contraseña" id="contraseña" />
+                    <input type="email" name="correo" id="correo" />
+                    <input type="text" name="username" id="username" />
+                  </div>
+                </div>
+                
+                <div class="display-flex-container">
+                  <div class="file-container">
+                    <label for="perfil" class="file-icon">Subir foto:</label>
+                    <img src="../img/Botones_imagenes-13.png" alt="Icono de imagen" class="file-image" id="imagenSubir"/>
+                    <input type="file" name="perfil" id="perfil" class="file-input"/>
+                    <script>
+                      document.getElementById('imagenSubir').addEventListener('click', function() {
+                          document.getElementById('perfil').click();
+                      });
+                  </script>
+                  </div>
+                  <div class="line-separator"></div>
+                  <div class="create-account-container">
+                    <button type="button">Crear cuenta</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const currentPage = "signup";
+
+      document.querySelectorAll(".list-item").forEach((item) => {
+        item.classList.remove("current");
+      });
+
+      document.getElementById(currentPage).classList.add("current");
+    </script>
+  </body>
+</html>

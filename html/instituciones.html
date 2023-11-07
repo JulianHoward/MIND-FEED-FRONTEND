@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Feed - Instituciones</title>
+
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../css/instituciones.css" />
+    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png" />
+  </head>
+  <body>
+    <script>
+      function setupMenu() {
+        const openMenu = document.getElementById("openMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const navLinks = document.querySelector(".desplegar");
+
+        openMenu.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+          openMenu.style.display = "none";
+          closeMenu.style.display = "block";
+        });
+
+        closeMenu.addEventListener("click", function () {
+          navLinks.classList.remove("show");
+          openMenu.style.display = "block";
+          closeMenu.style.display = "none";
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", setupMenu);
+    </script>
+
+    <div class="mobile-menu">
+      <div>
+        <div class="menu-icon">
+          <div class="menu-desplegar-icon">
+            <img src="../img/mobile/iconos_cel-02.png" alt="" id="openMenu" />
+            <img src="../img/mobile/iconos_cel-03.png" alt="" id="closeMenu" />
+          </div>
+          <div class="img-logo-mobile">
+            <img
+              src="../img/mobile/iconos_cel-06.png"
+              alt=""
+              class="logo-mobile"
+            />
+          </div>
+          <div class="login-button-mobile">
+            <button id="login-other-color">Log in</button>
+          </div>
+        </div>
+        <div class="desplegar">
+          <ul id="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <div class="line-link"></div>
+            <li><a href="login.html">Log in</a></li>
+            <div class="line-link"></div>
+            <li><a href="signup.html">Sign up</a></li>
+            <div class="line-link"></div>
+            <li><a href="mapa.html">Mapa</a></li>
+            <div class="line-link"></div>
+            <li>
+              <a href="instituciones.html"
+                >Instituciones educativas y contacto</a
+              >
+            </li>
+            <div class="line-link"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bar-container">
+        <div class="image-container">
+          <img
+            src="../img/logo_mindfeed-01.png"
+            alt="Logo MindFeed"
+            class="image-logo"
+          />
+        </div>
+        <div class="buttons-pages-container">
+          <ul class="list-buttons-pages">
+            <li class="list-item" id="inicio">
+              <a href="index.html">Inicio</a>
+            </li>
+            <li class="list-item" id="login">
+              <a href="login.html">Log in</a>
+            </li>
+            <li class="list-item" id="signup">
+              <a href="signup.html">Sign up</a>
+            </li>
+            <li class="list-item" id="mapa">
+              <a href="mapa.html">Mapa</a>
+            </li>
+            <li class="list-item" id="instituciones">
+              <a href="instituciones.html">Instituciones educativas y contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mobile-container">
+        <div class="img-institutions-mobile">
+            <img src="../img/mobile/iconos_cel-24.png" alt="">
+        </div>
+        <div class="title-institutions-container-mobile">
+            <h1>INSTITUCIONES EDUCATIVAS</h1>
+        </div>
+        <div>
+            CARRUSEL
+        </div>
+        <div>
+            <h1>CARRERAS OFRECIDAS</h1>
+        </div>
+        <div>
+            CARRUSEL
+        </div>
+        <div>
+            Anuncios:
+        </div>
+        <div>
+            CARRUSEL
+        </div>
+        <div>
+            <h2>DESCRIPCIÓN DE SERVICIOS Y/O PROGRAMAS</h2>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">Equipo de asesoramiento</a>
+                    </li>
+                    <li>
+                        <a href="#">Comunidad de estudiantes</a>
+                    </li>
+                    <li>
+                        <a href="#">Material de estudio descargable</a>
+                    </li>
+                    <li>
+                        <a href="#">NOTICIAS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            CONVENIOS:
+        </div>
+        <div>
+            CARRUSEL
+        </div>
+      </div>
+      <footer>
+        <div>
+            <h3>CONTACTO</h3>
+        </div>
+        <div class="dots-mobile-contacts">
+        </div>
+        <div class="social-networks-list-container">
+            <ul class="social-networks-list">
+                <li>
+                    <a href="#">Correo: MindfeedOficial@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#">Instagram: Mindfeed.bo</a>
+                </li>
+                <li>
+                    <a href="#">Tiktok: mind.feed.bo</a>
+                </li>
+                <li>
+                    <a href="#">Facebook: Mindfeed.bo</a>
+                </li>
+                <li>
+                    Número de contacto: 77652510
+                </li>
+            </ul>
+        </div>
+      </footer>
+  </body>
+</html>

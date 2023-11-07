@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Feed - Log in</title>
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png">
+  </head>
+  <body>
+    <script>
+      function setupMenu() {
+        const openMenu = document.getElementById("openMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const navLinks = document.querySelector(".desplegar");
+
+        openMenu.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+          openMenu.style.display = "none";
+          closeMenu.style.display = "block";
+        });
+
+        closeMenu.addEventListener("click", function () {
+          navLinks.classList.remove("show");
+          openMenu.style.display = "block";
+          closeMenu.style.display = "none";
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", setupMenu);
+    </script>
+
+    <div class="mobile-menu">
+      <div>
+        <div class="menu-icon">
+          <div class="menu-desplegar-icon">
+            <img src="../img/mobile/iconos_cel-02.png" alt="" id="openMenu" />
+            <img src="../img/mobile/iconos_cel-03.png" alt="" id="closeMenu" />
+          </div>
+          <div class="img-logo-mobile">
+            <img
+              src="../img/mobile/iconos_cel-06.png"
+              alt=""
+              class="logo-mobile"
+            />
+          </div>
+          <div class="login-button-mobile">
+            <button id="login-other-color">Log in</button>
+          </div>
+        </div>
+        <div class="desplegar">
+          <ul id="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <div class="line-link"></div>
+            <li><a href="login.html">Log in</a></li>
+            <div class="line-link"></div>
+            <li><a href="signup.html">Sign up</a></li>
+            <div class="line-link"></div>
+            <li><a href="mapa.html">Mapa</a></li>
+            <div class="line-link"></div>
+            <li>
+              <a href="instituciones.html"
+                >Instituciones educativas y contacto</a
+              >
+            </li>
+            <div class="line-link"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bar-container">
+      <div class="image-container">
+        <img
+          src="../img/logo_mindfeed-01.png"
+          alt="Logo MindFeed"
+          class="image-logo"
+        />
+      </div>
+      <div class="buttons-pages-container">
+        <ul class="list-buttons-pages">
+          <li class="list-item" id="inicio">
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="list-item" id="login">
+            <a href="login.html">Log in</a>
+          </li>
+          <li class="list-item" id="signup">
+            <a href="signup.html">Sign up</a>
+          </li>
+          <li class="list-item" id="mapa">
+            <a href="mapa.html">Mapa</a>
+          </li>
+          <li class="list-item" id="instituciones">
+            <a href="instituciones.html">Instituciones educativas y contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="image-form-container">
+      <img src="../img/Botones_imagenes-09.png" alt="Form Image" />
+    </div>
+
+    <div class="form-container">
+      <form action="POST" class="form-login">
+        <div class="inputs-labels" id="first-div">
+          <label for="user">Usuario:</label>
+          <input type="text" name="user" id="user" />
+        </div>
+        <div class="inputs-labels">
+          <label for="contraseña">Contraseña:</label>
+          <input type="password" name="contraseña" id="contraseña" />
+        </div>
+        <div class="inputs-labels" id="inputs-labels-go-in">
+          <input type="submit" value="Entrar" id="button-send-form" />
+        </div>
+        <div class="line-separator"></div>
+        <div class="create-account-container">
+          <button id="createAccountButton" type="button">Creación de cuenta</button>
+          <div class="create-text">(Créate una cuenta gratis)</div>
+        </div>
+      </form>
+    </div>
+    <div class="final-line"></div>
+
+    <script>
+      const currentPage = "login";
+
+      document.querySelectorAll(".list-item").forEach((item) => {
+        item.classList.remove("current");
+      });
+
+      document.getElementById(currentPage).classList.add("current");
+      var button = document.getElementById("login-other-color");
+      button.style.backgroundColor = "#f7db09";
+      button.style.color = "#38548b";
+    </script>
+    <script src="../js/script.js"></script>
+    <script src="../js/createAccountButton.js"></script>
+  </body>
+</html>

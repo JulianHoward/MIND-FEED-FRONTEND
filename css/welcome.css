@@ -1,0 +1,163 @@
+@font-face{
+    font-family: "Impact";
+    src: url('../fonts/Impact\ 400.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: "Verdana";
+    src: url('../fonts/VERDANA.TTF') format('truetype');
+}
+
+@font-face{
+    font-family: "Helvetica";
+    src: url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Helvetica Bold";
+    src: url('../fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
+.welcome-container{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.right-half{
+    width: 100%;
+    margin-top: 23%;
+}
+
+.img-people{
+    width: 100%;
+    height: 100%;
+}
+
+.title-welcome-container{
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.title-welcome{
+    color:  #33548B;
+    margin-bottom: 2%;
+    font-family: 'Helvetica Bold';
+    font-size: 32px;
+    margin: 0;
+}
+
+.dots{
+    width: 85%;
+    border-bottom: 2px dotted #33548B;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 7%;
+}
+
+.text-welcome{
+    display: none;
+}
+
+.text-welcome-mobile{
+    width: 85%;
+    text-align: justify;
+    color:  #33548B;
+    font-family: 'Helvetica';
+    font-size: 12px;
+    margin-left: 7%;
+}
+
+.images-container{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 14%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.images-container img{
+    width: 30%;
+    height: 30%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+@media(min-width: 992px){
+    .welcome-container{
+        display: flex;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .left-half{
+        width: 40%;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+    
+    .title-welcome-container{
+        text-align: center;
+        margin-left: -3%;
+        margin-right: 0;
+    }
+    
+    .title-welcome{
+        width: 70%;
+        color:  #33548B;
+        margin-bottom: 3%;
+        font-family: 'Helvetica Bold';
+        font-size: 60px;
+    }
+    
+    .dots{
+        width: 80%;
+        border-bottom: 3px dotted #33548B;
+        margin-bottom: 3%;
+        margin-left: 0;
+    }
+    
+    .text-welcome{
+        width: 80%;
+        text-align: justify;
+        color:  #33548B;
+        font-family: 'Helvetica';
+        font-size: 19px;
+        display: block;
+    }
+
+    .text-welcome-mobile{
+        display: none;
+    }
+    
+    .images-container{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+    
+    .images-container img{
+        width: 30%;
+        height: 30%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .right-half{
+        width: 60%;
+        margin-top: 0;
+    }
+    
+    .img-people{
+        width: 100%;
+        height: 100%;
+    }
+}
+
