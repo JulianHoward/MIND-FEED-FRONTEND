@@ -1,3 +1,13 @@
+@font-face{
+    font-family: "Helvetica";
+    src: url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Helvetica Bold";
+    src: url('../fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
 
 .img-institutions-mobile{
     width: 100%;
@@ -7,3 +17,104 @@
 .img-institutions-mobile img{
     width: 100%;
 }
+
+.title-institutions-container-mobile{
+    text-align: center;
+}
+
+.title-institutions-container-mobile h1{
+    font-family: 'Helvetica Bold';
+    font-size: 26px;
+    color: #33548B;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+#carrusel-container {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#image-carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#prev-btn img,
+#next-btn img {
+    width: 50px;
+}
+
+#prev-btn {
+    left: -10px;
+}
+
+#next-btn {
+    right: -10px;
+}
+
+#carrusel-container-carreras {
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    margin: auto; /* Centra el carrusel */
+    position: relative;
+    overflow: hidden;
+  }
+
+  #carreras-carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-carrera {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Helvetica';
+  }
+
+  .carrera-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  #back-btn {
+    left: 0px;
+  }
+
+  #back-btn img{
+    width: 20%;
+  }
+
+  #forward-btn {
+    right: -260px;
+  }
+
+  #forward-btn img{
+    width: 20%;
+  }

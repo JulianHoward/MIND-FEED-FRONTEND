@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../css/inicio.css" />
     <link rel="stylesheet" href="../css/instituciones.css" />
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png" />
   </head>
   <body>
@@ -72,107 +73,132 @@
     </div>
 
     <div class="header-bar-container">
-        <div class="image-container">
+      <div class="image-container">
+        <img
+          src="../img/logo_mindfeed-01.png"
+          alt="Logo MindFeed"
+          class="image-logo"
+        />
+      </div>
+      <div class="buttons-pages-container">
+        <ul class="list-buttons-pages">
+          <li class="list-item" id="inicio">
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="list-item" id="login">
+            <a href="login.html">Log in</a>
+          </li>
+          <li class="list-item" id="signup">
+            <a href="signup.html">Sign up</a>
+          </li>
+          <li class="list-item" id="mapa">
+            <a href="mapa.html">Mapa</a>
+          </li>
+          <li class="list-item" id="instituciones">
+            <a href="instituciones.html">Instituciones educativas y contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mobile-container">
+      <div class="img-institutions-mobile">
+        <img src="../img/mobile/iconos_cel-24.png" alt="" />
+      </div>
+      <div class="title-institutions-container-mobile">
+        <h1>INSTITUCIONES EDUCATIVAS</h1>
+      </div>
+      <div id="carrusel-container">
+        <div id="image-carrusel">
           <img
-            src="../img/logo_mindfeed-01.png"
-            alt="Logo MindFeed"
-            class="image-logo"
+            class="carousel-image"
+            src="../img/mobile/iconos_cel-37.png"
+            alt="Img 1"
+          />
+          <img
+            class="carousel-image"
+            src="../img/mobile/iconos_cel-38.png"
+            alt="Img 2"
           />
         </div>
-        <div class="buttons-pages-container">
-          <ul class="list-buttons-pages">
-            <li class="list-item" id="inicio">
-              <a href="index.html">Inicio</a>
+        <div id="prev-btn" class="carousel-btn" onclick="prevImage()">
+          <img src="../img/mobile/iconos_cel-35.png" alt="Anterior" />
+        </div>
+        <div id="next-btn" class="carousel-btn" onclick="nextImage()">
+          <img src="../img/mobile/iconos_cel-36.png" alt="Siguiente" />
+        </div>
+      </div>
+      <div class="title-institutions-container-mobile">
+        <h1>CARRERAS OFRECIDAS</h1>
+      </div>
+      <div id="carrusel-container-carreras">
+        <div id="carreras-carrusel">
+          <div class="carousel-carrera">Administración</div>
+          <div class="carousel-carrera">Derecho</div>
+          <div class="carousel-carrera">Medicina</div>
+          <div class="carousel-carrera">Mecatrónica</div>
+          <div class="carousel-carrera">Comunicación Social</div>
+        </div>
+        <div id="back-btn" class="carrera-btn" onclick="prevCarrera()">
+          <img src="../img/mobile/iconos_cel-35.png" alt="Anterior" />
+        </div>
+        <div id="forward-btn" class="carrera-btn" onclick="nextCarrera()">
+          <img src="../img/mobile/iconos_cel-36.png" alt="Siguiente" />
+        </div>
+      </div>
+      <div>Anuncios:</div>
+      <div>CARRUSEL</div>
+      <div>
+        <h2>DESCRIPCIÓN DE SERVICIOS Y/O PROGRAMAS</h2>
+        <div>
+          <ul>
+            <li>
+              <a href="#">Equipo de asesoramiento</a>
             </li>
-            <li class="list-item" id="login">
-              <a href="login.html">Log in</a>
+            <li>
+              <a href="#">Comunidad de estudiantes</a>
             </li>
-            <li class="list-item" id="signup">
-              <a href="signup.html">Sign up</a>
+            <li>
+              <a href="#">Material de estudio descargable</a>
             </li>
-            <li class="list-item" id="mapa">
-              <a href="mapa.html">Mapa</a>
-            </li>
-            <li class="list-item" id="instituciones">
-              <a href="instituciones.html">Instituciones educativas y contacto</a>
+            <li>
+              <a href="#">NOTICIAS</a>
             </li>
           </ul>
         </div>
       </div>
-
-      <div class="mobile-container">
-        <div class="img-institutions-mobile">
-            <img src="../img/mobile/iconos_cel-24.png" alt="">
-        </div>
-        <div class="title-institutions-container-mobile">
-            <h1>INSTITUCIONES EDUCATIVAS</h1>
-        </div>
-        <div>
-            CARRUSEL
-        </div>
-        <div>
-            <h1>CARRERAS OFRECIDAS</h1>
-        </div>
-        <div>
-            CARRUSEL
-        </div>
-        <div>
-            Anuncios:
-        </div>
-        <div>
-            CARRUSEL
-        </div>
-        <div>
-            <h2>DESCRIPCIÓN DE SERVICIOS Y/O PROGRAMAS</h2>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">Equipo de asesoramiento</a>
-                    </li>
-                    <li>
-                        <a href="#">Comunidad de estudiantes</a>
-                    </li>
-                    <li>
-                        <a href="#">Material de estudio descargable</a>
-                    </li>
-                    <li>
-                        <a href="#">NOTICIAS</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            CONVENIOS:
-        </div>
-        <div>
-            CARRUSEL
-        </div>
+      <div>CONVENIOS:</div>
+      <div>CARRUSEL</div>
+    </div>
+    <footer>
+      <div class="title-container-footer">
+        <h3>CONTACTO</h3>
       </div>
-      <footer>
-        <div>
-            <h3>CONTACTO</h3>
-        </div>
-        <div class="dots-mobile-contacts">
-        </div>
-        <div class="social-networks-list-container">
-            <ul class="social-networks-list">
-                <li>
-                    <a href="#">Correo: MindfeedOficial@gmail.com</a>
-                </li>
-                <li>
-                    <a href="#">Instagram: Mindfeed.bo</a>
-                </li>
-                <li>
-                    <a href="#">Tiktok: mind.feed.bo</a>
-                </li>
-                <li>
-                    <a href="#">Facebook: Mindfeed.bo</a>
-                </li>
-                <li>
-                    Número de contacto: 77652510
-                </li>
-            </ul>
-        </div>
-      </footer>
+      <div class="dots-mobile-contacts"></div>
+      <div class="social-networks-list-container">
+        <ul class="social-networks-list">
+          <li>
+            <a href="javascript:void(0);" onclick="redirectToGmail()"
+              >Correo: MindfeedOficial@gmail.com</a
+            >
+          </li>
+          <li>
+            <a href="https://acortar.link/Gv47e2">Instagram: Mindfeed.bo</a>
+          </li>
+          <li>
+            <a href="https://acortar.link/OIs1DN">Tiktok: mind.feed.bo</a>
+          </li>
+          <li>
+            <a href="https://acortar.link/n2B22X">Facebook: Mindfeed.bo</a>
+          </li>
+          <li>
+            <a href="https://wa.link/slpqrj">Número de contacto: 77652510</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="../js/carruselUniversities.js"></script>
+    <script src="../js/carrerasCarrusel.js"></script>
   </body>
 </html>
