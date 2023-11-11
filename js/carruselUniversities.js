@@ -1,4 +1,4 @@
-var currentIndex = 0;
+var currentIndexUno = 0;
     const totalImages = document.querySelectorAll('.carousel-image').length;
 
     function showImage(index) {
@@ -8,11 +8,11 @@ var currentIndex = 0;
     }
 
     function nextImage() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        showImage(currentIndex);
+        currentIndexUno = (currentIndexUno + 1) % totalImages;
+        showImage(currentIndexUno);
     }
 
     function prevImage() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        showImage(currentIndex);
+        currentIndexUno = (currentIndexUno - 1 + totalImages) % totalImages;
+        showImage(currentIndexUno);
     }
