@@ -6,16 +6,13 @@
     <title>Mind Feed - Sign up</title>
     <link rel="stylesheet" href="../css/inicio.css" />
     <link rel="stylesheet" href="../css/signup.css" />
-    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png">
+    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png" />
   </head>
   <body>
-
     <div class="mobile-menu">
       <div>
         <div class="menu-icon">
-          <div class="menu-desplegar-icon">
-            
-          </div>
+          <div class="menu-desplegar-icon"></div>
           <div class="img-logo-mobile">
             <img
               src="../img/mobile/iconos_cel-06.png"
@@ -32,28 +29,28 @@
 
     <div class="rest-mobile-container">
       <div class="img-background-mobile">
-        <img src="../img/mobile/iconos_cel-18.png" alt="">
+        <img src="../img/mobile/iconos_cel-18.png" alt="" />
       </div>
     </div>
 
     <div class="form-above-mobile">
       <div class="img-above">
-        <img src="../img/mobile/iconos_cel-19.png" alt="">
+        <img src="../img/mobile/iconos_cel-19.png" alt="" />
       </div>
       <div class="dots-form-mobile">
-        <img src="../img/mobile/iconos_cel-08.png" alt="">
+        <img src="../img/mobile/iconos_cel-08.png" alt="" />
       </div>
       <div class="title-mobile-container">
-        <h1> CREA TU CUENTA </h1>
+        <h1>CREA TU CUENTA</h1>
       </div>
       <div class="labels-forms-mobile">
-        <form action="POST">
+        <form action="#" id="signUpUser">
           <div class="mitad-mitad-mobile">
             <div class="izquierda-mobile">
               <label for="nombres">Nombres:</label>
               <label for="apellidos">Apellidos:</label>
               <label for="fechaNacimiento">Fecha de nacimiento:</label>
-              <label for="pais">País:</label>
+              <label for="selectedCountryMobile">País:</label>
               <label for="ciudad">Ciudad:</label>
               <label for="carnet">N° Carnet:</label>
               <label for="contraseña">Contraseña:</label>
@@ -63,36 +60,47 @@
             <div class="derecha-mobile">
               <input type="text" name="nombres" id="nombres" />
               <input type="text" name="apellidos" id="apellidos" />
-              <input type="date" name="fechaNacimiento" id="fechaNacimiento"/>
-              <input type="text" name="pais" id="pais" />
-              <input type="text" name="ciudad" id="ciudad" />
+              <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
+              <select name="selectedCountry" id="selectedCountry"></select>
+              <select id="selectedCity"></select>
               <input type="number" name="carnet" id="carnet" />
               <input type="password" name="contraseña" id="contraseña" />
               <input type="email" name="correo" id="correo" />
               <input type="text" name="username" id="username" />
             </div>
           </div>
-          
+
           <div class="display-flex-container-mobile">
             <div class="file-container-mobile">
               <label for="perfil" class="file-icon-mobile">Subir foto:</label>
-              <img src="../img/Botones_imagenes-13.png" alt="Icono de imagen" class="file-image-mobile" id="imagenSubir"/>
-              <input type="file" name="perfil" id="perfil" class="file-input-mobile"/>
+              <img
+                src="../img/Botones_imagenes-13.png"
+                alt="Icono de imagen"
+                class="file-image-mobile"
+                id="imagenSubir"
+              />
+              <input
+                type="file"
+                name="perfil"
+                id="perfil"
+                class="file-input-mobile"
+              />
               <script>
-                document.getElementById('imagenSubir').addEventListener('click', function() {
-                    document.getElementById('perfil').click();
-                });
-            </script>
+                document
+                  .getElementById("imagenSubir")
+                  .addEventListener("click", function () {
+                    document.getElementById("perfil").click();
+                  });
+              </script>
             </div>
             <div class="line-separator-mobile"></div>
             <div class="create-account-container-mobile">
-              <button type="button">Crear cuenta</button>
+              <button type="submit" id="createUser">Crear cuenta</button>
             </div>
           </div>
         </form>
       </div>
     </div>
-
 
     <div class="header-bar-container">
       <div class="image-container">
@@ -123,7 +131,6 @@
       </div>
     </div>
 
-    
     <div class="signup-container-general">
       <div class="signup-image-container-left">
         <img src="../img/Botones_imagenes-10.png" alt="Sign up Image" />
@@ -142,13 +149,13 @@
               <h1>CREA TU CUENTA</h1>
             </div>
             <div class="labels-forms">
-              <form action="POST">
+              <form action="#" id="signUpUser">
                 <div class="mitad-mitad">
                   <div class="izquierda">
                     <label for="nombres">Nombres:</label>
                     <label for="apellidos">Apellidos:</label>
                     <label for="fechaNacimiento">Fecha de nacimiento:</label>
-                    <label for="pais">País:</label>
+                    <label for="selectedCountry">País:</label>
                     <label for="ciudad">Ciudad:</label>
                     <label for="carnet">N° Carnet:</label>
                     <label for="contraseña">Contraseña:</label>
@@ -158,30 +165,49 @@
                   <div class="derecha">
                     <input type="text" name="nombres" id="nombres" />
                     <input type="text" name="apellidos" id="apellidos" />
-                    <input type="date" name="fechaNacimiento" id="fechaNacimiento"/>
-                    <input type="text" name="pais" id="pais" />
-                    <input type="text" name="ciudad" id="ciudad" />
+                    <input
+                      type="date"
+                      name="fechaNacimiento"
+                      id="fechaNacimiento"
+                    />
+                    <select
+                      name="selectedCountry"
+                      id="selectedCountry"
+                    ></select>
+                    <select id="selectedCity"></select>
                     <input type="number" name="carnet" id="carnet" />
                     <input type="password" name="contraseña" id="contraseña" />
                     <input type="email" name="correo" id="correo" />
                     <input type="text" name="username" id="username" />
                   </div>
                 </div>
-                
+
                 <div class="display-flex-container">
                   <div class="file-container">
                     <label for="perfil" class="file-icon">Subir foto:</label>
-                    <img src="../img/Botones_imagenes-13.png" alt="Icono de imagen" class="file-image" id="imagenSubir"/>
-                    <input type="file" name="perfil" id="perfil" class="file-input"/>
+                    <img
+                      src="../img/Botones_imagenes-13.png"
+                      alt="Icono de imagen"
+                      class="file-image"
+                      id="imagenSubir"
+                    />
+                    <input
+                      type="file"
+                      name="perfil"
+                      id="perfil"
+                      class="file-input"
+                    />
                     <script>
-                      document.getElementById('imagenSubir').addEventListener('click', function() {
-                          document.getElementById('perfil').click();
-                      });
-                  </script>
+                      document
+                        .getElementById("imagenSubir")
+                        .addEventListener("click", function () {
+                          document.getElementById("perfil").click();
+                        });
+                    </script>
                   </div>
                   <div class="line-separator"></div>
                   <div class="create-account-container">
-                    <button type="button">Crear cuenta</button>
+                    <button type="submit" id="createUser">Crear cuenta</button>
                   </div>
                 </div>
               </form>
@@ -190,6 +216,115 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const selectCountry = document.getElementById("selectedCountry");
+        const selectCity = document.getElementById("selectedCity");
+        const apiUrlCountries = "https://api-mindfeed.onrender.com/api/paises/";
+        const apiUrlCities = "https://api-mindfeed.onrender.com/api/ciudades/";
+
+        // Cargar la lista de países
+        fetch(apiUrlCountries)
+          .then((response) => response.json())
+          .then((data) => {
+            data.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+            data.forEach((option) => {
+              const optionElement = document.createElement("option");
+              optionElement.value = option.id;
+              optionElement.text = option.nombre;
+              selectCountry.appendChild(optionElement);
+            });
+          })
+          .catch((error) =>
+            console.error("Error al obtener datos de la API de países:", error)
+          );
+
+        // Evento al seleccionar un país
+        selectCountry.addEventListener("change", function () {
+          const selectedCountryId = selectCountry.value;
+
+          // Limpiar el select de ciudades antes de cargar nuevas ciudades
+          selectCity.innerHTML = "";
+
+          // Cargar la lista de ciudades del país seleccionado
+          fetch(apiUrlCities)
+            .then((response) => response.json())
+            .then((citiesData) => {
+              const citiesInSelectedCountry = citiesData
+                .filter((city) => city.pais.id == selectedCountryId)
+                .sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+              citiesInSelectedCountry.forEach((city) => {
+                const optionElement = document.createElement("option");
+                optionElement.value = city.id;
+                optionElement.text = city.nombre;
+                selectCity.appendChild(optionElement);
+              });
+            })
+            .catch((error) =>
+              console.error(
+                "Error al obtener datos de la API de ciudades:",
+                error
+              )
+            );
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("signUpUser");
+        const createAccountBtn = document.getElementById("createUser");
+    
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Evitar el comportamiento por defecto del formulario
+    
+          // Obtener los valores de los campos del formulario
+          const nombres = document.getElementById("nombres").value;
+          const apellidos = document.getElementById("apellidos").value;
+          const fechaNacimiento = document.getElementById("fechaNacimiento").value;
+          const selectedCountry = document.getElementById("selectedCountry").value;
+          const selectedCity = document.getElementById("selectedCity").value;
+          const carnet = document.getElementById("carnet").value;
+          const contraseña = document.getElementById("contraseña").value;
+          const correo = document.getElementById("correo").value;
+          const username = document.getElementById("username").value;
+    
+          // Puedes agregar validaciones de datos aquí si es necesario
+    
+          // Construir el objeto de datos
+          const userData = {
+            nombres,
+            apellidos,
+            fechaNacimiento,
+            pais: selectedCountry,
+            ciudad: selectedCity,
+            carnet,
+            contraseña,
+            correo,
+            username,
+            // Puedes agregar más campos según sea necesario
+          };
+    
+          // Realizar la solicitud POST a la API
+          fetch("https://api-mindfeed.onrender.com/api/usuarios/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // Manejar la respuesta de la API según sea necesario
+              console.log("Usuario creado con éxito:", data);
+            })
+            .catch((error) => {
+              console.error("Error al crear el usuario:", error);
+            });
+        });
+      });
+    </script>
     <script>
       const currentPage = "signup";
 
