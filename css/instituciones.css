@@ -1,259 +1,341 @@
-@font-face{
-    font-family: "Helvetica";
-    src: url('../fonts/Helvetica.ttf') format('truetype');
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica.ttf") format("truetype");
 }
 
-@font-face{
-    font-family: "Helvetica Bold";
-    src: url('../fonts/Helvetica-Bold.ttf') format('truetype');
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("../fonts/Helvetica-Bold.ttf") format("truetype");
 }
 
-.img-institutions-mobile{
-    width: 100%;
-    margin-top: 23%;
+.desktop-container {
+  display: none;
 }
 
-.img-institutions-mobile img{
-    width: 100%;
+.img-institutions-mobile {
+  width: 100%;
+  margin-top: 23%;
 }
 
-.title-institutions-container-mobile{
-    text-align: center;
+.img-institutions-mobile img {
+  width: 100%;
 }
 
-.title-institutions-container-mobile h1{
-    font-family: 'Helvetica Bold';
-    font-size: 26px;
-    color: #33548B;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.title-institutions-container-mobile {
+  text-align: center;
 }
 
+.title-institutions-container-mobile h1 {
+  font-family: "Helvetica Bold";
+  font-size: 26px;
+  color: #33548b;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
 #carrusel-container {
-    width: 60%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    padding-left: 5%;
-    padding-right: 5%;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #image-carrusel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 #prev-btn img,
 #next-btn img {
-    width: 50px;
+  width: 50px;
 }
 
 #prev-btn {
-    left: -10px;
+  left: -10px;
 }
 
 #next-btn {
-    right: -10px;
+  right: -10px;
 }
 
 #carrusel-container-carreras {
-    width: 80%;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #carreras-carrusel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-carrera {
-    width: 100%;
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 20px;
-    padding: 20px;
-    font-family: 'Helvetica';
-  }
-
-  .carrera-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-
-  #back-btn {
-    left: 0px;
-  }
-
-  #back-btn img{
-    width: 20%;
-  }
-
-  #forward-btn {
-    right: -260px;
-  }
-
-  #forward-btn img{
-    width: 20%;
-  }
-
-  .announce-container {
-    text-align: center;
-    font-size: 25px;
-    color: #a3a3a4;
-  }
-
-  #anuncios-carrusel-container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  #anuncios-carrusel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .anuncio-image {
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-  }
-
-  .anuncio-image img{
-    width: 80%;
-    height: 50%;
-  }
-
-.dot-line-separator{
-    width: 80%;
-    margin-left: 10%;
-    border-bottom: 3px dotted #33548B;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.services-title{
-    font-family: 'Helvetica Bold';
-    font-size: 26px;
-    color: #33548B;
-    text-align: center;
-    margin: 2%;
+#carreras-carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.flex-both{
-    display: flex;
+.carousel-carrera {
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  font-family: "Helvetica";
 }
 
-.flex-buttons-instituciones-one{
-    width: 50%;
+.carrera-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
-.flex-buttons-instituciones-one ul{
-    padding-left: 4%;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-right: 0;
+#back-btn {
+  left: 0px;
 }
 
-.flex-buttons-instituciones-one li{
-    list-style: none;
-    margin-top: 3%;
-    margin-bottom: 3%;
+#back-btn img {
+  width: 20%;
 }
 
-.flex-buttons-instituciones-one a{
-    text-decoration: none;
-    color: #33548B;
-    font-family: 'Helvetica';
-    font-size: 13px;
-    border: 1px solid #33548B;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    padding: 2%;
+#forward-btn {
+  right: -260px;
 }
 
-.flex-buttons-instituciones-two{
-    width: 50%;
+#forward-btn img {
+  width: 20%;
 }
 
-.flex-buttons-instituciones-two ul{
-    padding-right: 4%;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+.announce-container {
+  text-align: center;
+  font-size: 25px;
+  color: #a3a3a4;
 }
 
-.flex-buttons-instituciones-two li{
-    list-style: none;
-    margin-top: 8%;
-    margin-bottom: 5%;
+#anuncios-carrusel-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.flex-buttons-instituciones-two a{
-    text-decoration: none;
-    color: #33548B;
-    font-family: 'Helvetica';
-    font-size: 13px;
-    border: 1px solid #33548B;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    padding: 2%;
+#anuncios-carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.title-institutions-container-mobile{
-    font-family: 'Helvetica Bold';
-    font-size: 26px;
-    color: #33548B;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.anuncio-image {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.anuncio-image img {
+  width: 80%;
+  height: 50%;
+}
+
+.dot-line-separator {
+  width: 80%;
+  margin-left: 10%;
+  border-bottom: 3px dotted #33548b;
+}
+
+.services-title {
+  font-family: "Helvetica Bold";
+  font-size: 26px;
+  color: #33548b;
+  text-align: center;
+  margin: 2%;
+}
+
+.flex-both {
+  display: flex;
+}
+
+.flex-buttons-instituciones-one {
+  width: 50%;
+}
+
+.flex-buttons-instituciones-one ul {
+  padding-left: 4%;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.flex-buttons-instituciones-one li {
+  list-style: none;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.flex-buttons-instituciones-one a {
+  text-decoration: none;
+  color: #33548b;
+  font-family: "Helvetica";
+  font-size: 13px;
+  border: 1px solid #33548b;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 2%;
+}
+
+.flex-buttons-instituciones-two {
+  width: 50%;
+}
+
+.flex-buttons-instituciones-two ul {
+  padding-right: 4%;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.flex-buttons-instituciones-two li {
+  list-style: none;
+  margin-top: 8%;
+  margin-bottom: 5%;
+}
+
+.flex-buttons-instituciones-two a {
+  text-decoration: none;
+  color: #33548b;
+  font-family: "Helvetica";
+  font-size: 13px;
+  border: 1px solid #33548b;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 2%;
+}
+
+.title-institutions-container-mobile {
+  font-family: "Helvetica Bold";
+  font-size: 26px;
+  color: #33548b;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #carrusel-container-d {
-    width: 60%;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#image-carrusel-d {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image-d {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-btn-d {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#prev-btn-d img,
+#next-btn-d img {
+  width: 50px;
+}
+
+#prev-btn-d {
+  left: -10px;
+}
+
+#next-btn-d {
+  right: -10px;
+}
+
+@media (min-width: 992px) {
+  .mobile-container {
+    display: none;
+  }
+
+  .desktop-container {
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .img-desktop-institutions {
+    width: 50%;
+    margin-top: 5%;
+  }
+
+  .img-desktop-institutions img {
+    width: 100%;
+  }
+
+  .right-one-desktop {
+    width: 50%;
+    display: block;
+  }
+
+  .title-institutions-container-desktop {
+    text-align: center;
+    margin-top: 14%;
+    font-family: "Helvetica Bold";
+    font-size: 18px;
+    color: #33548b;
+    width: 90%;
+  }
+
+  #carrusel-container-desktop {
+    width: 24%;
     margin: auto;
     overflow: hidden;
     position: relative;
     padding-left: 5%;
-    padding-right: 5%;
-}
+    padding-right: 48%;
+  }
 
-#image-carrusel-d {
+  #image-carrusel-desktop {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
+  }
 
-.carousel-image-d {
+  .carousel-image-desktop {
     width: 100%;
     height: auto;
-}
+  }
 
-.carousel-btn-d {
+  .carousel-btnA {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -262,105 +344,28 @@
     background-color: transparent;
     border: none;
     outline: none;
-}
+  }
 
-#prev-btn-d img,
-#next-btn-d img {
+  #prev-btnA img,
+  #next-btnA img {
     width: 50px;
-}
+  }
 
-#prev-btn-d {
+  #prev-btnA {
     left: -10px;
-}
+  }
 
-#next-btn-d {
+  #next-btnA {
     right: -10px;
-}
+  }
 
-@media(min-width: 992px){
+  #different {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 78%;
+  }
 
-    .mobile-container{
-        display: none;
-    }
-
-    .flex{
-        display: flex;
-    }
-
-    .img-desktop-institutions{
-        width: 50%;
-        margin-top: 5%;
-    }
-    
-    .img-desktop-institutions img{
-        width: 100%;
-    }
-
-    .right-one-desktop{
-        width: 50%;
-        display: block;
-    }
-
-    .title-institutions-container-desktop{
-        text-align: center;
-        margin-top: 14%;
-        font-family: 'Helvetica Bold';
-        font-size: 18px;
-        color: #33548B;
-        width: 90%;
-    }
-
-    #carrusel-container-desktop {
-        width: 24%;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
-        padding-left: 5%;
-        padding-right: 48%;
-    }
-    
-    #image-carrusel-desktop {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-    
-    .carousel-image-desktop {
-        width: 100%;
-        height: auto;
-    }
-    
-    .carousel-btnA {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 24px;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        outline: none;
-    }
-    
-    #prev-btnA img,
-    #next-btnA img {
-        width: 50px;
-    }
-    
-    #prev-btnA {
-        left: -10px;
-    }
-    
-    #next-btnA {
-        right: -10px;
-    }
-
-    #different{
-        margin-top: 0;
-        margin-bottom: 0;
-        width: 78%;
-    }
-
-    
-    #carrusel-container-carreras {
+  #carrusel-container-carreras {
     width: 37%;
     margin: auto;
     position: relative;
@@ -372,8 +377,6 @@
   #carreras-carrusel {
     display: flex;
     transition: transform 0.9s ease-in-out;
-    
-    
   }
 
   .carousel-carrera {
@@ -383,7 +386,7 @@
     text-align: center;
     font-size: 20px;
     padding: 10px;
-    font-family: 'Helvetica';
+    font-family: "Helvetica";
     align-items: flex-start;
     justify-content: flex-start;
     flex-grow: 0;
@@ -400,7 +403,7 @@
     left: 0px;
   }
 
-  #back-btn img{
+  #back-btn img {
     width: 20%;
   }
 
@@ -408,14 +411,14 @@
     right: -268px;
   }
 
-  #forward-btn img{
+  #forward-btn img {
     width: 20%;
   }
 
   .announce-container {
     text-align: start;
     font-size: 18px;
-    font-family: 'Helvetica Bold';
+    font-family: "Helvetica Bold";
     margin-left: 9%;
     color: #a3a3a4;
   }
@@ -439,9 +442,8 @@
     width: 100%;
   }
 
-  .anuncio-image img{
+  .anuncio-image img {
     width: 80%;
     height: 50%;
   }
-    
 }

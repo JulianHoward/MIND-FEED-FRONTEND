@@ -1,21 +1,43 @@
-async function getCities(e) {
-    e.preventDefault(); // Evitar que la página se recargue
+document.addEventListener("DOMContentLoaded", function () {
+    const selectCountry = document.getElementById("countryInput");
+    const resultados = document.getElementById('resultados');
 
-    const searchTerm = document.getElementById('countryInput').value;
+    const apiUrlCountries = "https://api-mindfeed.onrender.com/api/paises/";
+    const apiUrlCities = "https://api-mindfeed.onrender.com/api/ciudades/";
 
-    try {
-        const response = await fetch(`http://127.0.0.1:8000/api/paises?q=${searchTerm}`);
-        const data = await response.json();
-
-        const resultados = document.getElementById('resultados');
+    // Función para cargar ciudades
+    async function loadCities(selectedCountryId, resultados) {
+        // Limpiar el contenedor antes de cargar nuevas ciudades
         resultados.innerHTML = '';
 
-        data.forEach(item => {
-            const resultElement = document.createElement('div');
-            resultElement.textContent = item.nombre;
-            resultados.appendChild(resultElement);
-        });
-    } catch (error) {
-        console.error('Error al obtener datos:', error);    
+        try {
+            // Cargar la lista de ciudades del país seleccionado
+            const response = await fetch(apiUrlCities + `?pais=${selectedCountryId}`);
+            const citiesData = await response.json();
+
+            citiesData.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+            citiesData.forEach((city) => {
+                const resultElement = document.createElement("div");
+                resultElement.textContent = city.nombre;
+                resultados.appendChild(resultElement);
+            });
+        } catch (error) {
+            console.error("Error al obtener datos de la API de ciudades:", error);
+        }
     }
+
+    // Evento al enviar el formulario (al presionar Enter en el input)
+    document.querySelector('.form-flex').addEventListener("submit", function (e) {
+        e.preventDefault();
+        const selectedCountryId = selectCountry.value;
+        loadCities(selectedCountryId, resultados);
+    });
+});
+
+// Función getCities que estás llamando en el HTML
+function getCities(event) {
+    // Esta función podría contener lógica específica que necesitas ejecutar al hacer clic
+    // Pero en este caso, parece que no necesitas definirla si estás usando loadCities directamente
+    event.preventDefault();
 }

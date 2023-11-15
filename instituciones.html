@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Feed - Instituciones</title>
+
+  <link rel="stylesheet" href="./css/inicio.css" />
+  <link rel="stylesheet" href="./css/instituciones.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="icon" href="./img/mobile/iconos_cel-06.png" type="image/png" />
+</head>
+<body>
+<script>
+  function setupMenu() {
+    const openMenu = document.getElementById("openMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const navLinks = document.querySelector(".desplegar");
+
+    openMenu.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+      openMenu.style.display = "none";
+      closeMenu.style.display = "block";
+    });
+
+    closeMenu.addEventListener("click", function () {
+      navLinks.classList.remove("show");
+      openMenu.style.display = "block";
+      closeMenu.style.display = "none";
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", setupMenu);
+</script>
+
+<script>
+  let currentIndex = 0;
+  const intervalTiming = 3000;
+
+  function nextAnnounce() {
+    if (
+            currentIndex <
+            document.querySelectorAll(".anuncio-image").length - 1
+    ) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarruselAnuncios();
+  }
+
+  function updateCarruselAnuncios() {
+    const carr = document.getElementById("anuncios-carrusel");
+    const imgWidth = document.querySelector(".anuncio-image").offsetWidth;
+    const totalWidth =
+            imgWidth * document.querySelectorAll(".anuncio-image").length;
+    const newPos = -currentIndex * imgWidth;
+
+    carr.style.transform = `translateX(${newPos}px)`;
+  }
+
+  setInterval(nextAnnounce, intervalTiming);
+</script>
+
+<div class="mobile-menu">
+  <div>
+    <div class="menu-icon">
+      <div class="menu-desplegar-icon">
+        <img src="./img/mobile/iconos_cel-02.png" alt="" id="openMenu" />
+        <img src="./img/mobile/iconos_cel-03.png" alt="" id="closeMenu" />
+      </div>
+      <div class="img-logo-mobile">
+        <img
+                src="./img/mobile/iconos_cel-06.png"
+                alt=""
+                class="logo-mobile"
+        />
+      </div>
+      <div class="login-button-mobile">
+        <button id="login-other-color">Log in</button>
+      </div>
+    </div>
+    <div class="desplegar">
+      <ul id="menu-list">
+        <li><a href="index.html">Inicio</a></li>
+        <div class="line-link"></div>
+        <li><a href="login.html">Log in</a></li>
+        <div class="line-link"></div>
+        <li><a href="signup.html">Sign up</a></li>
+        <div class="line-link"></div>
+        <li><a href="mapa.html">Mapa</a></li>
+        <div class="line-link"></div>
+        <li>
+          <a href="instituciones.html"
+          >Instituciones educativas y contacto</a
+          >
+        </li>
+        <div class="line-link"></div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="header-bar-container">
+  <div class="image-container">
+    <img
+            src="./img/logo_mindfeed-01.png"
+            alt="Logo MindFeed"
+            class="image-logo"
+    />
+  </div>
+  <div class="buttons-pages-container">
+    <ul class="list-buttons-pages">
+      <li class="list-item" id="inicio">
+        <a href="index.html">Inicio</a>
+      </li>
+      <li class="list-item" id="login">
+        <a href="login.html">Log in</a>
+      </li>
+      <li class="list-item" id="signup">
+        <a href="signup.html">Sign up</a>
+      </li>
+      <li class="list-item" id="mapa">
+        <a href="mapa.html">Mapa</a>
+      </li>
+      <li class="list-item" id="instituciones">
+        <a href="instituciones.html">Instituciones educativas y contacto</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="desktop-container">
+  <div class="flex">
+    <div class="img-desktop-institutions">
+      <img src="./img/mobile/iconos_cel-24.png" alt="" />
+    </div>
+    <div class="right-one-desktop">
+      <div class="title-institutions-container-desktop">
+        <h1>INSTITUCIONES EDUCATIVAS</h1>
+      </div>
+      <div id="carrusel-container-desktop">
+        <div id="image-carrusel-desktop">
+          <img
+                  class="carousel-image-desktop"
+                  src="./img/mobile/iconos_cel-37.png"
+                  alt="Img 1"
+          />
+          <img
+                  class="carousel-image-desktop"
+                  src="./img/mobile/iconos_cel-38.png"
+                  alt="Img 2"
+          />
+        </div>
+        <div id="prev-btnA" class="carousel-btnA" onclick="prevImageDesk()">
+          <img src="./img/mobile/iconos_cel-35.png" alt="Anterior" />
+        </div>
+        <div id="next-btnA" class="carousel-btnA" onclick="nextImageDesk()">
+          <img src="./img/mobile/iconos_cel-36.png" alt="Siguiente" />
+        </div>
+      </div>
+      <div class="title-institutions-container-desktop" id="different">
+        <h1>CARRERAS OFRECIDAS</h1>
+      </div>
+      <div id="carrusel-container-carreras">
+        <div id="carreras-carrusel">
+          <div class="carousel-carrera">Administración</div>
+          <div class="carousel-carrera">Derecho</div>
+          <div class="carousel-carrera">Medicina</div>
+          <div class="carousel-carrera">Mecatrónica</div>
+          <div class="carousel-carrera">Comunicación Social</div>
+        </div>
+        <div id="back-btn" class="carrera-btn" onclick="prevCarrera()">
+          <img src="./img/mobile/iconos_cel-35.png" alt="Anterior" />
+        </div>
+        <div id="forward-btn" class="carrera-btn" onclick="nextCarrera()">
+          <img src="./img/mobile/iconos_cel-36.png" alt="Siguiente" />
+        </div>
+      </div>
+      <div class="announce-container">Anuncios:</div>
+      <div id="anuncios-carrusel-container">
+        <div id="anuncios-carrusel">
+          <div class="anuncio-image">
+            <img src="./img/mobile/iconos_cel-34.png" alt="" />
+          </div>
+          <div class="anuncio-image">
+            <img src="./img/mobile/iconos_cel-36.png" alt="" />
+          </div>
+          <div class="anuncio-image">
+            <img src="./img/mobile/iconos_cel-38.png" alt="" />
+          </div>
+          <div class="anuncio-image">
+            <img src="./img/mobile/iconos_cel-39.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-container">
+  <div class="img-institutions-mobile">
+    <img src="./img/mobile/iconos_cel-24.png" alt="" />
+  </div>
+  <div class="title-institutions-container-mobile">
+    <h1>INSTITUCIONES EDUCATIVAS</h1>
+  </div>
+  <div id="carrusel-container">
+    <div id="image-carrusel">
+      <img
+              class="carousel-image"
+              src="./img/mobile/iconos_cel-37.png"
+              alt="Img 1"
+      />
+      <img
+              class="carousel-image"
+              src="./img/mobile/iconos_cel-38.png"
+              alt="Img 2"
+      />
+    </div>
+    <div id="prev-btn" class="carousel-btn" onclick="prevImage()">
+      <img src="./img/mobile/iconos_cel-35.png" alt="Anterior" />
+    </div>
+    <div id="next-btn" class="carousel-btn" onclick="nextImage()">
+      <img src="./img/mobile/iconos_cel-36.png" alt="Siguiente" />
+    </div>
+  </div>
+  <div class="title-institutions-container-mobile">
+    <h1>CARRERAS OFRECIDAS</h1>
+  </div>
+  <div id="carrusel-container-carreras">
+    <div id="carreras-carrusel">
+      <div class="carousel-carrera">Administración</div>
+      <div class="carousel-carrera">Derecho</div>
+      <div class="carousel-carrera">Medicina</div>
+      <div class="carousel-carrera">Mecatrónica</div>
+      <div class="carousel-carrera">Comunicación Social</div>
+    </div>
+    <div id="back-btn" class="carrera-btn" onclick="prevCarrera()">
+      <img src="./img/mobile/iconos_cel-35.png" alt="Anterior" />
+    </div>
+    <div id="forward-btn" class="carrera-btn" onclick="nextCarrera()">
+      <img src="./img/mobile/iconos_cel-36.png" alt="Siguiente" />
+    </div>
+  </div>
+  <div class="announce-container">Anuncios:</div>
+  <div id="anuncios-carrusel-container">
+    <div id="anuncios-carrusel">
+      <div class="anuncio-image">
+        <img src="./img/mobile/iconos_cel-34.png" alt="" />
+      </div>
+      <div class="anuncio-image">
+        <img src="./img/mobile/iconos_cel-36.png" alt="" />
+      </div>
+      <div class="anuncio-image">
+        <img src="./img/mobile/iconos_cel-38.png" alt="" />
+      </div>
+      <div class="anuncio-image">
+        <img src="./img/mobile/iconos_cel-39.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="dot-line-separator"></div>
+  <div>
+    <h2 class="services-title">DESCRIPCIÓN DE SERVICIOS Y/O PROGRAMAS</h2>
+    <div class="flex-both">
+      <div class="flex-buttons-instituciones-one">
+        <ul>
+          <li>
+            <a href="#">Equipo de asesoramiento</a>
+          </li>
+          <li>
+            <a href="#">Comunidad de estudiantes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-buttons-instituciones-two">
+        <ul>
+          <li>
+            <a href="#">Material de estudio descargable</a>
+          </li>
+          <li>
+            <a href="#">NOTICIAS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="title-institutions-container-mobile">CONVENIOS:</div>
+  <div id="carrusel-container-d">
+    <div id="image-carrusel-d">
+      <img
+              class="carousel-image-d"
+              src="./img/mobile/iconos_cel-37.png"
+              alt="Img 1"
+      />
+      <img
+              class="carousel-image-d"
+              src="./img/mobile/iconos_cel-38.png"
+              alt="Img 2"
+      />
+    </div>
+    <div id="prev-btn-d" class="carousel-btn-d" onclick="prevImageD()">
+      <img src="./img/mobile/iconos_cel-35.png" alt="Anterior" />
+    </div>
+    <div id="next-btn-d" class="carousel-btn-d" onclick="nextImageD()">
+      <img src="./img/mobile/iconos_cel-36.png" alt="Siguiente" />
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="title-container-footer">
+    <h3>CONTACTO</h3>
+  </div>
+  <div class="dots-mobile-contacts"></div>
+  <div class="social-networks-list-container">
+    <ul class="social-networks-list">
+      <li>
+        <a href="javascript:void(0);" onclick="redirectToGmail()"
+        >Correo: MindfeedOficial@gmail.com</a
+        >
+      </li>
+      <li>
+        <a href="https://acortar.link/Gv47e2">Instagram: Mindfeed.bo</a>
+      </li>
+      <li>
+        <a href="https://acortar.link/OIs1DN">Tiktok: mind.feed.bo</a>
+      </li>
+      <li>
+        <a href="https://acortar.link/n2B22X">Facebook: Mindfeed.bo</a>
+      </li>
+      <li>
+        <a href="https://wa.link/slpqrj">Número de contacto: 77652510</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  const currentPage = "instituciones";
+
+  document.querySelectorAll(".list-item").forEach((item) => {
+    item.classList.remove("current");
+  });
+
+  document.getElementById(currentPage).classList.add("current");
+</script>
+
+<script src="./js/carruselUniversities.js"></script>
+<script src="./js/carrerasCarrusel.js"></script>
+<script src="./js/conveniosCarrusel.js"></script>
+<script src="./js/desktopUniversities.js"></script>
+</body>
+</html>

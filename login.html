@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mind Feed - Log in</title>
-    <link rel="stylesheet" href="../css/inicio.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png">
+    <link rel="stylesheet" href="./css/inicio.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="icon" href="./img/mobile/iconos_cel-06.png" type="image/png">
   </head>
   <body>
     <script>
@@ -35,12 +35,12 @@
       <div>
         <div class="menu-icon">
           <div class="menu-desplegar-icon">
-            <img src="../img/mobile/iconos_cel-02.png" alt="" id="openMenu" />
-            <img src="../img/mobile/iconos_cel-03.png" alt="" id="closeMenu" />
+            <img src="./img/mobile/iconos_cel-02.png" alt="" id="openMenu" />
+            <img src="./img/mobile/iconos_cel-03.png" alt="" id="closeMenu" />
           </div>
           <div class="img-logo-mobile">
             <img
-              src="../img/mobile/iconos_cel-06.png"
+              src="./img/mobile/iconos_cel-06.png"
               alt=""
               class="logo-mobile"
             />
@@ -73,7 +73,7 @@
     <div class="header-bar-container">
       <div class="image-container">
         <img
-          src="../img/logo_mindfeed-01.png"
+          src="./img/logo_mindfeed-01.png"
           alt="Logo MindFeed"
           class="image-logo"
         />
@@ -100,7 +100,7 @@
     </div>
 
     <div class="image-form-container">
-      <img src="../img/Botones_imagenes-09.png" alt="Form Image" />
+      <img src="./img/Botones_imagenes-09.png" alt="Form Image" />
     </div>
 
     <div class="form-container">
@@ -144,7 +144,7 @@
           };
     
           // Realizar la solicitud POST al endpoint de autenticación
-          fetch("https://api-mindfeed.onrender.com/api/token", {
+          fetch("https://api-mindfeed.onrender.com/api/token/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -182,7 +182,7 @@
       button.style.backgroundColor = "#f7db09";
       button.style.color = "#38548b";
     </script>
-    <script src="../js/script.js"></script>
-    <script src="../js/createAccountButton.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/createAccountButton.js"></script>
   </body>
 </html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mind Feed - Mapa</title>
-    <link rel="stylesheet" href="../css/inicio.css" />
-    <link rel="stylesheet" href="../css/mapa.css" />
-    <link rel="icon" href="../img/mobile/iconos_cel-06.png" type="image/png">
-    <script src="../js/city.js"></script>
+    <link rel="stylesheet" href="./css/inicio.css" />
+    <link rel="stylesheet" href="./css/mapa.css" />
+    <link rel="icon" href="./img/mobile/iconos_cel-06.png" type="image/png">
+    <script src="./js/config.js"></script>
   </head>
   <body>
 
@@ -35,12 +35,12 @@
     <div class="mobile-menu">
       <div class="menu-icon">
         <div class="menu-desplegar-icon">
-          <img src="../img/mobile/iconos_cel-02.png" alt="" id="openMenu"/>
-          <img src="../img/mobile/iconos_cel-03.png" alt="" id="closeMenu">
+          <img src="./img/mobile/iconos_cel-02.png" alt="" id="openMenu"/>
+          <img src="./img/mobile/iconos_cel-03.png" alt="" id="closeMenu">
         </div>
         <div class="img-logo-mobile">
           <img
-            src="../img/mobile/iconos_cel-06.png"
+            src="./img/mobile/iconos_cel-06.png"
             alt=""
             class="logo-mobile"
           />
@@ -69,7 +69,7 @@
     <div class="header-bar-container">
       <div class="image-container">
         <img
-          src="../img/logo_mindfeed-01.png"
+          src="./img/logo_mindfeed-01.png"
           alt="Logo MindFeed"
           class="image-logo"
         />
@@ -98,7 +98,7 @@
 
     <div class="img-text-container">
       <div class="img-map-container">
-        <img src="../img/mind feed_imágenes-05.png" alt="Map Icon" />
+        <img src="./img/mind%20feed_imágenes-05.png" alt="Map Icon" />
       </div>
       <div class="text-map-container">
         Ofrecemos la capacidad de filtrar cursos según tus preferencias,
@@ -117,10 +117,9 @@
         <div class="input-country">
             <form action="#" method="get" class="form-flex">
               <input type="text" name="q" id="countryInput" placeholder="Ingresa el país">
-                <button type="submit" class="button-filter-map" onclick="getCities(event)">
-                  <img src="../img/search-solid.svg" alt="Search Icon" />
+              <button type="button" class="button-filter-map" id="submitBtn">
+                <img src="./img/search-solid.svg" alt="Search Icon" />
               </button>
-              
             </div>
             </form>
         </div>
@@ -131,26 +130,72 @@
     </div>
 
     <div class="filter-country-container">
-        <div class="icon-button-filter">
-            <div class="img-filter-container">
-                <img src="../img/mobile/iconos_cel-02.png" alt="Menu Icon">
-            </div>
-            
-            <div>Filtros</div>
-        </div>
-    </div>
+      <div class="icon-button-filter" id="filterButton">
+          <div class="img-filter-container">
+              <img src="./img/mobile/iconos_cel-02.png" alt="Menu Icon">
+          </div>
+          <div>Filtros</div>
+      </div>
+  </div>
 
-    <div id="resultados" class="resultados"></div>
+    <div id="resultsContainer" style="display: none;">
+      <div id="resultados" class="resultados"></div>
+  </div>
 
-<script src="../js/loadMap.js"></script>
-<script>
-  const currentPage = "mapa";
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const selectCountry = document.getElementById("countryInput");
+  const resultados = document.getElementById('resultados');
+  const resultsContainer = document.getElementById('resultsContainer');
+  const filterButton = document.getElementById('filterButton');
+  const submitButton = document.getElementById('submitBtn'); // Agregado
 
-  document.querySelectorAll(".list-item").forEach((item) => {
-    item.classList.remove("current");
+  const apiUrlCities = "https://api-mindfeed.onrender.com/api/ciudades/";
+
+  async function loadCities(selectedCountryId, resultados) {
+    resultados.innerHTML = '';
+
+    try {
+      const response = await fetch(apiUrlCities + `?pais=${selectedCountryId}`);
+      const citiesData = await response.json();
+
+      citiesData.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+      citiesData.forEach((city) => {
+        const buttonElement = document.createElement("button");
+        buttonElement.textContent = city.nombre;
+        buttonElement.id = city.nombre;
+        buttonElement.classList.add('ciudades');
+        buttonElement.addEventListener('click', () => handleCityClick(city)); // Modificado
+        resultados.appendChild(buttonElement);
+      });
+
+      resultsContainer.style.display = 'block';
+    } catch (error) {
+      console.error("Error al obtener datos de la API de ciudades:", error);
+    }
+  }
+
+  filterButton.addEventListener('click', function () {
+    resultsContainer.style.display = resultsContainer.style.display === 'none' ? 'block' : 'none';
   });
 
-  document.getElementById(currentPage).classList.add("current");
-</script>
+  // Modificado: Manejar clics en el botón de enviar
+  submitButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    const selectedCountryId = selectCountry.value;
+    loadCities(selectedCountryId, resultados);
+  });
+
+  // Añadido: Función para manejar clics en ciudades
+  function handleCityClick(city) {
+    // Emitir un evento personalizado para comunicarse con loadMap.js
+    const event = new CustomEvent('citySelected', { detail: city });
+    document.dispatchEvent(event);
+  }
+});
+  </script>
+  <script src="./js/loadMap.js"></script>
+    
   </body>
 </html>
